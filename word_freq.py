@@ -53,10 +53,13 @@ def create_worddict_from_text(texts):
     return worddict
 
 
-def extract_sentences_from_text(texts):
-    sentences = {}
-    for text in texts():
-        newdict = dict.fromkeys(nlth)
+# not yet implemented
+#def extract_sentences_from_text(texts):
+#    sentences = {}
+#    for text in texts():
+#        newdict = dict.fromkeys(nlth)
+
+
 def dict_contains_word(word, wdict):
     for key in wdict.keys():
         if word == key:
