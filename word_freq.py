@@ -81,12 +81,7 @@ def parse_scp_pages(startpage, pagecount):
     scp_url = "http://scp-wiki.wikidot.com/scp-"
     pagesref = range(startpage, startpage+pagecount)
     for pagenum in pagesref:
-        if pagenum < 10:
-            scp_id = "00"+str(pagenum)
-        elif pagenum < 100:
-            scp_id = "0"+str(pagenum)
-        else:
-            scp_id = str(pagenum)
+        scp_id = str(pagenum).zfill(3)
         url = scp_url+scp_id
         print("Generating word list from "+scp_id)
         html = get_page_from_scpwiki(url)
